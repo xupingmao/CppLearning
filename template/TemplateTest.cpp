@@ -11,7 +11,8 @@ using namespace std;
 template <typename T>
 
 void printObject(T t) {
-    cout << t << endl;
+    cout << "sizeof(T)=" << sizeof(T) << endl;
+    cout << "value=" << t << endl;
 }
 
 int main(int argc, char* argv[]) {
