@@ -68,8 +68,11 @@ int main(int argc, char const *argv[])
     test_pop_back(intVector);
 
     // add some elements
-    test_insert(intVector, 3);
-    test_insert(intVector, 100);
+    test_push_back(intVector, 2);
+
+    test_push_back(intVector, 10);
+    test_push_back(intVector, 10);
+
 
     return 0;
 }
