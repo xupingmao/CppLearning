@@ -9,10 +9,13 @@ using namespace std;
 // void pop_back(value);
 
 void printVector(vector<int> &v) {
-    cout << "intVector = [";
+    cout << "[";
     for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
     {
-        cout << *i << ",";
+        if (i != v.begin()) {
+            cout << ",";
+        }
+        cout << *i ;
     }
     cout << "]" << endl << endl;
 }
@@ -72,6 +75,25 @@ int main(int argc, char const *argv[])
 
     test_push_back(intVector, 10);
     test_push_back(intVector, 10);
+
+    cout << "first element is vector::front() " << intVector.front() << endl;
+    cout << "last element is vector::back() " << intVector.back() << endl;
+
+    cout << endl;
+    // seems not useful.
+    cout << "** vector::swap" << endl;
+    vector<int> va (2,2); // 2 with value 2
+    vector<int> vb (3,5); // 3 with value 5
+    cout << "va = ";
+    printVector(va);
+    cout << "vb = ";
+    printVector(vb);
+    cout << "after swap" << endl;
+    va.swap(vb);
+    cout << "va = ";
+    printVector(va);
+    cout << "vb = ";
+    printVector(vb);
 
 
     return 0;
