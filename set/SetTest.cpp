@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 		}
 		cout << *it;
 	}
-	cout << "]";
+	cout << "]" << endl;
 	return 0;
 }
 
