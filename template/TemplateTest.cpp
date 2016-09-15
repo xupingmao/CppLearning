@@ -28,6 +28,13 @@ void add (A a, A b) {
     cout << a << " + " << b << " = " << a + b << endl;
 }
 
+template <class T>
+void MySwap(T& a, T& b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
 int main(int argc, char* argv[]) {
     printObject(1);
     printObject(2);
@@ -39,4 +46,11 @@ int main(int argc, char* argv[]) {
     string a = "hello";
     string b = "world";
     add(a, b);
+
+    cout << "test swap" << endl;
+    int ia = 10;
+    int ib = 20;
+    cout << ia << ib << endl;
+    MySwap(ia,ib);
+    cout << ia << ib << endl;
 }
