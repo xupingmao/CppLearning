@@ -1,3 +1,7 @@
 /Debug/
 *.out
 .DS_Store
+*.exe
+*_u.cpp
+*副本.cpp
+*.txt
