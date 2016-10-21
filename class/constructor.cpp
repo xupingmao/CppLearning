@@ -14,16 +14,19 @@ class Person {
   Person() {
     strcpy(this->name, "emptry");
     this->age = 0;
+	cout << __func__ << "::Person()"	<< endl;
   } 
   Person(const char* name) {
     strcpy(this->name, name);
     // this->name = name;
+	cout << __func__ << "::Person(const char*)" << endl;
   }
 
   Person(const char* name, int age) {
     strcpy(this->name, name);
     // this->name = name;
     this->age = age;
+	cout << __func__ << "::Person(const char*,int)" << endl;
   }
 
   // 复制构造函数
@@ -47,9 +50,20 @@ class Person {
 
 };
 
-class Child {
+class Child :public Person {
 
-
+	
+public:
+	Child()
+	{
+		cout << __func__ << "::Child()" << endl;
+	}
+	
+	Child(int age)
+	{
+		cout << __func__ << "::Child(int)" << endl;
+		age = 10;
+	}
 };
 
 
@@ -66,6 +80,9 @@ int main() {
   p4.introduce();
   // Person p5 = p4; // 复制构造函数
   // p5.introduce();
+  
+  Child c2(10);
+  
   return 0;
 }
 

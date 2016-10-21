@@ -28,5 +28,12 @@ int main()
   cout << typeid(c).name() << endl;
   c->Print();
   delete c;
+  
+  decltype(10) t1 = 10;
+  auto t2 = 1.0;
+  
+  cout << typeid(t1).name() << endl;
+  cout << typeid(t2).name() << endl;
+  
   return 0;
 }
